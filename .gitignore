@@ -3,3 +3,5 @@ venv
 dataset/test
 dataset/train
 dataset/validation
+
+__ignore__*
