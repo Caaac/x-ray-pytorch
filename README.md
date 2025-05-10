@@ -62,3 +62,35 @@ class_label:
 #### ROC Curves
 
 ![alt text](./assets/readme/image.png)
+
+
+### №2
+
+
+#### Train data
+
+* <b>Loss:</b> CrossEntropyLoss
+* <b>Optimizer:</b>
+  - <b>Type:</b> Adam
+  - <b>Learning rate:</b> 1e-3
+  - <b>L2:</b> 1e-3
+* <b>Transform:</b>
+  1. ToTensor()
+  1. ToDtype(dtype=torch.float32, scale=True)
+* <b>CNN:</b> Densenet121 (requires_grad = True)
+* <b>FCL:</b> 
+  ```py
+  nn.Sequential(
+      nn.Linear(1024, 2048),
+      nn.ReLU(inplace=True),
+      nn.Dropout(.25),
+      nn.Linear(2048, 512),
+      nn.ReLU(inplace=True),
+      nn.Dropout(.25),
+      nn.Linear(512, 15)
+  )
+  ```
+
+#### ROC Curves
+
+![alt text](./assets/readme/2-image.png)
