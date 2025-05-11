@@ -4,5 +4,6 @@ venv
 dataset/test
 dataset/train
 dataset/validation
+dataset/*.json
 
 __ignore__*
